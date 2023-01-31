@@ -5,7 +5,7 @@ import ru.netology.sqr.Java61.services.SQRService;
 public class SQRServiceTest {
 
     @Test
-    public void testPositiveXY() {
+    public void testPositiveMinAndMax() {
         SQRService service = new SQRService();
         int expected = 12;
         int actual = service.sqrService(200, 700);
@@ -13,7 +13,7 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void testNegativeXY() {
+    public void testNegativeMinAndMax() {
         SQRService service = new SQRService();
         int expected = 0;
         int actual = service.sqrService(-200, -700);
@@ -21,7 +21,7 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void testPositiveXNegativeY() {
+    public void testPositiveMinNegativeMax() {
         SQRService service = new SQRService();
         int expected = 0;
         int actual = service.sqrService(200, -700);
@@ -29,7 +29,7 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void testNegativeXPositiveY() {
+    public void testNegativeMinPositiveMax() {
         SQRService service = new SQRService();
         int expected = 17;
         int actual = service.sqrService(-200, 700);
@@ -37,7 +37,7 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void testEqualXY() {
+    public void testEqualMinAndMax() {
         SQRService service = new SQRService();
         int expected = 1;
         int actual = service.sqrService(100, 100);
